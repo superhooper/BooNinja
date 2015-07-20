@@ -1,0 +1,96 @@
+body {
+	background-color: black;
+}
+h1 {
+	font-family: cursive;
+	font-size: 40px;
+	font-color: white;
+	color: white;
+	display: block;
+	text-align: center;
+}
+
+.buttons {
+	position: fixed;
+	top: 300px;
+	left: 0px;
+}
+
+li {
+	/*size*/
+	width: 180px;
+	height: 20px;
+	/*position on page*/
+	margin-bottom: 5px;
+	/*formatting*/
+	background-color: rgb(101, 115, 130);
+	border: 2px solid white;
+	border-radius: 10px;
+	/*text*/
+	padding: 2px 8px 2px 8px;
+	text-align: center;
+	list-style-type: none;
+}
+
+li:hover {background-color: rgba(81, 92, 104, .7);}
+
+a:link {color: white;
+	font-size: 16px;
+	font-family: Helvetica;
+	text-decoration: none;}
+a:hover {font-size: 18px;
+	font-weight: bold;}
+a:visited {color: white;}
+
+#actiondisplay {
+	/*size*/
+	height: 200px;
+	width: 180px;
+	/*position on page*/
+	position: fixed;
+	/*display: block;*/
+	top: 100px;
+	left: 40px;
+	margin-bottom: 20px;
+	/*formatting*/
+	background-color: rgb(101, 115, 130);
+	border-radius: 10px;
+	border: 2px solid white;
+	/*text*/
+	text-align: left;
+	padding: 2px 10px 2px 6px;
+	color: white;
+	font-size: 16px;
+	font-family: Helvetica; 
+	
+}
+
+#actiontext {
+	text-align: top;
+}
+
+#scoreword {
+	position: fixed;
+	top: 250px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#output {
+	position: fixed;
+	top: 250px;
+	left: 190px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+img {
+	/*margin: 0 auto;*/
+	display: inline;
+	border-radius: 10px;
+	/*border: 1px solid white;*/
+	position: fixed;
+	top: 100px;
+	left: 250px;
+}
+

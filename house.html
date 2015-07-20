@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Boo is a Ninja!</title>
+		<script src="js\boohouse_2.js"></script>
+		<link rel="stylesheet" type="text/css" href="css\boohouse.css">
+	</head>
+	<body>
+		
+		<h1>Welcome to Boo's Ninja House!</h1>
+		
+	<!--
+		<div class="tracker" id="actiondisplay">
+			<p id="actiontext">You walk into Boo's Ninja house.</p>
+		</div>
+	-->
+
+		<div class="buttons">
+			<ul>
+				<li><a href=#><div id="livingroom" onclick="livingroom(event)">Living Room</a></li>
+				<li><a href=#><div id="kitchen" onclick="kitchen(event)">Kitchen</a></li>
+				<li><a href=#><div id="study" onclick="study(event)">Study</a></li>
+				<li><a href=#><div id="bedroom1" onclick="bedroom1(event)">Master Bedroom</a></li>
+				<li><a href=#><div id="bedroom2" onclick="bedroom2(event)">Guest Bedroom</a></li>
+				<li><a href=#><div id="bathroom" onclick="bathroom(event)">Bathroom</a></li>
+				<li><a href=#><div id="porch" onclick="porch(event)">Porch</a></li>
+				<li><a href=#><div id="garage" onclick="garage(event)">Garage</a></li>
+			</ul>				
+
+			<!--<ul>
+				Save in case we want to move back to buttons.
+				<li><buttom type="button" name="livingroom" onclick="livingroom(event)">Living Room</button></li>
+			</ul>-->
+		</div>
+
+		<div class="rooms">
+			<img id="currentroom" src="livingroom.jpg" usemap="livingroommap"/>
+				<!--Living Room-->
+				<map name="livingroommap" id="livingroommap">
+					<area id="magazine" shape="" coords="363,182,396,228" 
+						alt="Throw a magazine at the intruder!"  title="Throw a magazine at the intruder!"
+						onclick="magazineClick(event)">
+					<area id="lamp" shape="circle" coords="6,147,38,185" 
+						alt="Throw a lamp!"  title="Throw a lamp!"
+						onclick="lampClick(event)">
+					<area id="mask" shape="rect" coords="4,217,48,246" 
+						alt="Put on your mask." title="Put on your mask." 
+						onclick="maskClick(event)">
+					<area id="tv" shape="rect" coords="36,27,483,43" 
+						alt="Turn on the TV." title="Turn on the TV."
+						onclick="tvClick(event)">
+					<area id="apples" shape="circle" coords="848,213,15"
+						alt="Throw an apple." title="Throw an apple."
+						onclick="appleClick(event)">
+				</map>	
+				<!--Kitchen--> 
+				<!--If there's time make a map area for the stove top and turn it red.-->
+				<map name="kitchenmap" id="kitchenmap">
+					<area id="stove" shape="rect" coords="0,218,128,342" 
+						alt="This is hot." title="This is hot."
+						onclick="stoveClick(event)">
+					<area id="whisk" shape="rect" coords="421,120,533,125" 
+						alt="Get the whisk out of the dishwasher." title="Get the whisk out of the dishwasher."
+						onclick="whiskClick(event)">
+					<area id="knife" shape="rect" coords="54,139,116,146" 
+						alt="Throw a knife at the bitch." title="Throw a knife at the bitch."
+						onclick="knifeClick(event)">
+					<area id="drink" shape="rect" coords="414,6,473,31" 
+						alt="Have a drink." title="Have a drink."
+						onclick="drinkClick(event)">
+					<area id="teatowel" shape="rect" coords="185,64,202,106" 
+						alt="Whip the towel." title="Whip the towel."
+						onclick="teatowelClick(event)">
+					<area id="pot" shape="rect" coords="260,440,324,521"
+						alt="Hit the pot over their head." title="Hit the pot over their head."
+						onclick="potClick(event)">
+					<area id="tomato" shape="rect" coords="57,163,170,187"
+						alt="Throw the tomatoes." title="Throw the tomatoes."
+						onclick="tomatoClick(event)">
+				</map>	
+				<!--Study-->
+				<map name="studymap" id="studymap">
+					<area id="scissors" shape="rect" coords="405,320,463,358" 
+						alt="CUT THINGS!  Like the intruder's throat." title="CUT THINGS!  Like the intruder's throat." 
+						onclick="scissorsClick(event)">
+					<area id="craft" shape="rect" coords="10,185,26,255" 
+						alt="Paint a craft!  Or the intruder." title="Paint a craft!  or the intruder." 
+						onclick="craftClick(event)">
+				</map>
+				<!--Bedroom 1-->
+				<map name="bedroom1map" id="bedroom1map">
+					<area id="pillow" shape="rect" coords="6,116,76,301" 
+						alt="Being a ninja is exhausing. Maybe you should take a nap."
+						title="Being a ninja is exhausting.  Maybe you should nap."
+						onclick="pillowClick(event)">
+					<area id="closet" shape="rect" coords="41,0,222,20" 
+						alt="Change your outfit." title="Change your outfit."
+						onclick="closetClick(event)">
+					<area id="tote" shape="circle" coords="257,244,50" 
+						alt="What's in the tote?" title="What's in the tote?"
+						onclick="toteClick(event)">
+					<area id="cell" shape="circle" coords="515,231,15" 
+						alt="Phone a friend." title="Phone a friend."
+						onclick="cellClick(event)">
+				</map>
+				<!--Bedroom 2-->
+				<map name="bedroom2map" id="bedroom2map">
+					<area id="guestbed" shape="rect" coords="10,0,172,352" 
+						alt="Prepare the guest bed for the best guest, Roo." 
+						title="Prepare the guest bed for the best guest, Roo." 
+						onclick="guestbedClick(event)">
+					<area id="sewingmachine" shape="rect" coords="289,29,391,78" 
+						alt="Sew some curtains."
+						title="Sew some curtains."
+						onclick="sewingmachineClick(event)">
+					<area id="needles" shape="rect" coords="406,57,429,77" 
+						alt="Grab some needles to poke the intruder."
+						title="Grab some needles to poke the intruder."
+						onclick="needlesClick(event)">
+				</map>
+
+				<!--Bathroom-->
+				<map name="bathroommap" id="bathroommap">
+					<area id="poison" shape="rect" coords="" 
+					alt="What's in the medicine closet?" 
+					onclick="poisonClick(event)">
+				</map>
+
+				<!--Porch-->
+				<map name="porchmap" id="porchmap">
+					<area id="cat" shape="rect" coords="0,136,343,363" alt="Here is a cat." onclick="catClick(event)">
+				</map>
+				<!--Garage-->
+				<map name="garagemap" id="garagemap">
+					<area id="tools" shape="rect" coords="0,136,343,363" alt="Find a stabby tool." onclick="toolsClick(event)">
+				</map>
+
+
+		</div>
+		<!--
+		<div class="scoreboard" id="score">
+			<p id="scoreword">SCORE</p>
+			<p id="actualscore">0</p>
+		</div>
+		-->
+		<div class="tracker" id="actiondisplay">
+			<p id="actiontext">You walk into Boo's Ninja house.</p>
+			<p id="score">Score: 0</p>
+		</div>
+
+		<!--<div class="furniture" id="bed"></div>
+		<div class="furniture" id="pillow" onclick="pillowClick(event)"></div>
+		-->
+	</body>
+	
+</html>

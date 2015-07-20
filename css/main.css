@@ -1,0 +1,29 @@
+body {
+	background-color: black;
+
+}
+
+h1 {
+	font-family: cursive;
+	font-size: 40px;
+	font-color: white;
+	color: white;
+	display: block;
+	text-align: center;
+}
+
+/*
+h1:hover {
+	background-color: red;
+}
+*/
+
+img {
+	margin: auto;
+	opacity: .6;
+	width: 800px;
+	display: block;
+	margin-top: 0px;
+	border: 10px solid white;
+	border-radius: 10px;
+}

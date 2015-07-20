@@ -1,0 +1,29 @@
+body {background-color: black;
+		color: white;
+	}
+header {text-align: center;
+		font-family: 'Rock Salt', cursive;
+		color: purple;
+		/*display: inline;*/
+	}
+div#headimage {/*border-radius: 90px;*/
+				text-align: center;
+				border: 2px solid white;
+				display: inline-block;
+
+					}
+div#list {text-align: center;
+			}
+img#bio {border: solid 3px purple;
+			padding: 2px 2px 2px 2px;
+			border-radius: 10px 10px 10px 10px;
+			}
+img#skills {border: solid 3px purple;
+			padding: 2px 2px 2px 2px;
+			border-radius: 10px 10px 10px 10px;
+			}
+img#games {border: solid 3px purple;
+			padding: 2px 2px 2px 2px;
+			border-radius: 10px 10px 10px 10px;
+			}
+

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Boo is a Ninja!</title>
+		<script src="js\boohouse_2.js"></script>
+		<script type="text/javascript" src="js\jquery-1.11.3.js"></script>
+		<link rel="stylesheet" type="text/css" href="css\boohouse2.css">
+	</head>
+	<body>
+		<header>
+			<h1>Welcome to Boo's Ninja House!</h1>
+			<div class="buttons">
+				<ul>
+					<li><a href=#><div id="livingroom" onclick="livingroom(event)">Living Room</a></li>
+					<li><a href=#><div id="kitchen" onclick="kitchen(event)">Kitchen</a></li>
+					<li><a href=#><div id="study" onclick="study(event)">Study</a></li>
+					<li><a href=#><div id="bedroom1" onclick="bedroom1(event)">Master Bedroom</a></li>
+					<li><a href=#><div id="bedroom2" onclick="bedroom2(event)">Guest Bedroom</a></li>
+					<li><a href=#><div id="bathroom" onclick="bathroom(event)">Bathroom</a></li>
+					<!-- UNCOMMENT THESE if you have time to build them.
+					<li><a href=#><div id="porch" onclick="porch(event)">Porch</a></li>
+					<li><a href=#><div id="garage" onclick="garage(event)">Garage</a></li>
+					-->
+				</ul>
+
+			<!--<ul>
+				Save in case we want to move back to buttons.
+				<li><buttom type="button" name="livingroom" onclick="livingroom(event)">Living Room</button></li>
+			</ul>-->
+			</div>
+		</header>
+
+		<div class="tracker" id="actiondisplay">
+			<p id="actiontext">You walk into Boo's house and there is an intruder!!!  Time to break out the ninja skills!! Click the ninja mask on the table to get started.</p>
+			<p id="scoreword">Score:</p>
+			<p id="output">0</p>
+		</div>
+
+		<div class="rooms">
+			<img id="currentroom" src="livingroom.jpg" usemap="#livingroommap"/>
+				<!--Living Room-->
+				<map name="livingroommap" id="livingroommap">
+					<area id="magazine" shape="" coords="363,182,396,228" 
+						alt="Read a nice magazine."  title="Read a nice magazine."
+						onclick="clicked(this)">
+					<area id="lamp" shape="circle" coords="6,147,38,185" 
+						alt="Throw the lamp at the intruder!"  title="Throw the lamp at the intruder!"
+						onclick="clicked(this)">
+					<area id="mask" shape="rect" coords="4,217,48,246" 
+						alt="Put on your ninja mask please." title="Put on your ninja mask please." 
+						onclick="clicked(this)">
+					<area id="tv" shape="rect" coords="36,27,483,43" 
+						alt="Turn on the TV." title="Turn on the TV."
+						onclick="clicked(this)">
+					<area id="apples" shape="circle" coords="848,213,15"
+						alt="Maybe you should throw an apple at him." 
+						title="Maybe you should throw an apple at him."
+						onclick="clicked(this)">
+				</map>	
+				<!--Kitchen--> 
+				<!--If there's time make a map area for the stove top and turn it red.-->
+				<map name="kitchenmap" id="kitchenmap">
+					<area id="stove" shape="rect" coords="0,218,128,342" 
+						alt="Turn the stove on." title="Turn the stove on."
+						onclick="clicked(this)">
+					<area id="whisk" shape="rect" coords="421,120,533,125" 
+						alt="Get the whisk out of the dishwasher." title="Get the whisk out of the dishwasher."
+						onclick="clicked(this)">
+					<area id="knife" shape="rect" coords="54,139,116,146" 
+						alt="Throw a knife at the bitch." title="Throw a knife at the bitch."
+						onclick="clicked(this)">
+					<area id="drink" shape="rect" coords="414,6,473,31" 
+						alt="Being a ninja is stressful.  Have a drink." 
+						title="Being a ninja is stressful.  Have a drink."
+						onclick="clicked(this)">
+					<area id="teatowel" shape="rect" coords="185,64,202,106" 
+						alt="Use this to clean up any blood." 
+						title="Use this to clean up any blood."
+						onclick="clicked(this)">
+					<area id="pot" shape="rect" coords="260,440,324,521"
+						alt="Hit him over the head." title="Hit him over the head."
+						onclick="clicked(this)">
+					<area id="tomato" shape="rect" coords="57,163,170,187"
+						alt="Throw the tomatoes." title="Throw the tomatoes."
+						onclick="clicked(this)">
+				</map>	
+				<!--Study-->
+				<map name="studymap" id="studymap">
+					<area id="scissors" shape="rect" coords="405,320,463,358" 
+						alt="CUT THINGS!  Like the intruder's throat." 
+						title="CUT THINGS!  Like the intruder's throat." 
+						onclick="clicked(this)">
+					<area id="paintbrush" shape="rect" coords="10,185,26,255" 
+						alt="Paint something.  Like the intruder's face." 
+						title="Paint something.  Like the intruder's face." 
+						onclick="clicked(this)">
+					<area id="door" shape="rect" coords="483,20,487,132" 
+						alt="What's that noise outside?" 
+						title="What's that noise outside?" 
+						onclick="clicked(this)">
+				</map>
+				<!--Bedroom 1-->
+				<map name="bedroom1map" id="bedroom1map">
+					<area id="pillow" shape="rect" coords="6,116,76,301" 
+						alt="Being a ninja is exhausing. Maybe you should nap."
+						title="Being a ninja is exhausting.  Maybe you should nap."
+						onclick="clicked(this)">
+					<area id="closet" shape="rect" coords="41,0,222,20" 
+						alt="Change into more suitable ninja clothes." 
+						title="Change into more suitable ninja clothes."
+						onclick="clicked(this)">
+					<area id="tote" shape="circle" coords="257,244,50" 
+						alt="What's in the tote?" title="What's in the tote?"
+						onclick="clicked(this)">
+					<area id="cell" shape="circle" coords="515,231,15" 
+						alt="Phone a friend.  Namely the po-po." 
+						title="Phone a friend.  Namely the po-po."
+						onclick="clicked(this)">
+				</map>
+				<!--Bedroom 2-->
+				<map name="bedroom2map" id="bedroom2map">
+					<area id="guestbed" shape="rect" coords="10,0,172,352" 
+						alt="Prepare the guest bed for the best guest, Roo." 
+						title="Prepare the guest bed for the best guest, Roo." 
+						onclick="clicked(this)">
+					<area id="sewingmachine" shape="rect" coords="289,29,391,78" 
+						alt="Sew some curtains."
+						title="Sew some curtains."
+						onclick="clicked(this)">
+					<area id="needles" shape="rect" coords="406,57,429,77" 
+						alt="Grab some needles to poke the intruder."
+						title="Grab some needles to poke the intruder."
+						onclick="clicked(this)">
+				</map>
+
+				<!--Bathroom-->
+				<map name="bathroommap" id="bathroommap">
+					<area id="toilet" shape="circle" coords="263,234,55" 
+						alt="When ya gotta go, ya gotta go." 
+						title="When ya gotta go, ya gotta go." 
+						onclick="clicked(this)">
+					<area id="rx" shape="circle" coords="322,490,35" 
+						alt="Mix up some prescriptions to create a poison." 
+						title="Mix up some prescriptions to create a poison." 
+						onclick="clicked(this)">
+					<area id="closet2" shape="rect" coords="1,320,9,477" 
+						alt="Mix some cleaning supplies to make surphuric acid."
+						title="Mix some cleaning supplies to make surphuric acid." 
+						onclick="clicked(this)">
+				</map>
+
+				<!--Porch-->
+				<map name="porchmap" id="porchmap">
+					<area id="cat" shape="rect" coords="0,136,343,363" 
+					alt="Here is a cat." onclick="catClick(event)">
+				</map>
+				<!--Garage-->
+				<map name="garagemap" id="garagemap">
+					<area id="tools" shape="rect" coords="0,136,343,363" 
+					alt="Find a stabby tool." onclick="toolsClick(event)">
+				</map>
+
+
+		</div>
+		<!--
+		<div class="scoreboard" id="score">
+			<p id="scoreword">SCORE</p>
+			<p id="actualscore">0</p>
+		</div>
+		-->
+		
+
+		<!--<div class="furniture" id="bed"></div>
+		<div class="furniture" id="pillow" onclick="pillowClick(event)"></div>
+		-->
+	</body>
+	
+</html>
